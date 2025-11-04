@@ -1,0 +1,32 @@
+<div class="assistant-widget" aria-label="Assistant chat" role="complementary">
+  <!-- Avatar / Toggle Button -->
+  <button class="assistant-avatar" (click)="toggle()" aria-label="Open assistant">
+    <img ngSrc="../../assets/robo-head.png" alt="" height="1024" width="1024"/>
+  </button>
+
+  <form class="assistant-input" id="assistantForm">
+    <input type="text" id="assistantMessage" [(ngModel)]="input" name="message" placeholder="Ask me anything..." aria-label="Assistant message" />
+    <button type="submit" (click)="send()" class="assistant-send" aria-label="Send">➤</button>
+  </form>
+
+  <!-- Small chat window -->
+  @if (isOpen) {
+    <section class="assistant-panel" role="dialog" aria-label="Assistant chat window">
+      <header class="panel-header">
+        <div class="title">
+          <img ngSrc="../../assets/robo-head.png" alt="" height="1024" width="1024"/>
+          <span>Assistant</span>
+        </div>
+        <button class="close" (click)="toggle()" aria-label="Close">×</button>
+      </header>
+      <div class="messages" aria-live="polite">
+        @for (m of messages; track m.text) {
+          <div class="message" [class.user]="m.role==='user'" [class.assistant]="m.role==='assistant'">
+            <div class="bubble"> {{m.text}} </div>
+          </div>
+        }
+      </div>
+    </section>
+  }
+
+</div>

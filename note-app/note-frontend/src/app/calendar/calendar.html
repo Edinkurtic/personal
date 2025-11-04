@@ -1,0 +1,18 @@
+@if (modelService.openCalendar$ | async) {
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <h2 class="calendar-title" id="weekRange"></h2>
+      <div class="calendar-nav">
+        <button class="nav-btn today-btn" (click)="goToToday()">Today</button>
+        <button class="nav-btn" (click)="previousWeek()">◀ Prev</button>
+        <button class="nav-btn" (click)="nextWeek()">Next ▶</button>
+      </div>
+    </div>
+
+    <div class="week-header" id="weekHeader"></div>
+
+    <div class="all-day-section" id="allDaySection"></div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+  </div>
+}
+

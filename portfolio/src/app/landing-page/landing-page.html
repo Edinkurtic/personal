@@ -4,24 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawand ibo - Portfolio</title>
-    
+
 </head>
 <body>
     <div class="bg-container"></div>
 
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">AR</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
+  <app-nav-bar></app-nav-bar>
     <section class="hero" id="home">
         <div class="floating-elements">
             <div class="floating-element"></div>
@@ -29,12 +17,13 @@
             <div class="floating-element"></div>
             <div class="floating-element"></div>
         </div>
+      <!-- Mini assistant widget will render separately; remove large robot image -->
 
         <div class="hero-content">
             <h1>Lawand ibo</h1>
             <p class="subtitle">Creative Developer & Designer</p>
             <p class="description">
-                Crafting digital experiences that blend innovative design with cutting-edge technology. 
+                Crafting digital experiences that blend innovative design with cutting-edge technology.
                 Passionate about creating solutions that make a difference.
             </p>
             <div class="cta-buttons">
@@ -58,11 +47,10 @@
             </div>
         </div>
 
-        <div class="scroll-indicator">
-            ↓
-        </div>
     </section>
 
+    <!-- Mini Assistant Widget -->
+    <app-chat-bot></app-chat-bot>
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
@@ -98,7 +86,7 @@
                 const speed = (index + 1) * 0.5;
                 const x = mouseX * speed;
                 const y = mouseY * speed;
-                
+
                 element.style.transform += ` translate(${x}px, ${y}px)`;
             });
         });
@@ -108,7 +96,7 @@
             btn.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-3px) scale(1.02)';
             });
-            
+
             btn.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
             });
@@ -118,7 +106,7 @@
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const rate = scrolled * -0.5;
-            
+
             document.querySelector('.floating-elements').style.transform = `translateY(${rate}px)`;
         });
 
@@ -139,6 +127,7 @@
         document.querySelectorAll('.stat-item').forEach(stat => {
             observer.observe(stat);
         });
+
     </script>
 </body>
 </html>

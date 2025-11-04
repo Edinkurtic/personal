@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/4c13cac1-dc77-4dd7-b84a-c6037337cfe3/console_1.sql" value="4c13cac1-dc77-4dd7-b84a-c6037337cfe3" />
+    <file url="file://$PROJECT_DIR$/note/src/database/toNotWait.sql" value="4c13cac1-dc77-4dd7-b84a-c6037337cfe3" />
+  </component>
+</project>
