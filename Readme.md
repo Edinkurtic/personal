@@ -6,3 +6,4 @@ Most of the repositories here are ongoing  — I use GitHub as a lab for ideas i
 * Chronicle note(note-apps): Trying to recreate the notion app but for free (In progress).
 * LifeQuest: Trying to gamify life (In progress). 
 * Portfolio: My portfolio (In the beginning).
+Im 34 years old
